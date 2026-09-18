@@ -1,0 +1,107 @@
+# NeonClans Configuration File
+
+# General Clan Creation Settings
+creation:
+  enabled: true
+  cost: 100.0
+  name-min-length: 3
+  name-max-length: 16
+  tag-min-length: 2
+  tag-max-length: 6
+  allow-colors-in-name: false
+
+# Clan Tag Roles Suffix Configuration
+roles:
+  owner:
+    suffix: "**"
+    display-name: "Owner"
+  moderator:
+    suffix: "*"
+    display-name: "Moderator"
+    max-promotions: 3 # Max moderators/promotions allowed per clan
+  member:
+    suffix: ""
+    display-name: "Member"
+
+# Clan Teleportation Settings
+teleportation:
+  warmup-seconds: 3 # Delay before teleporting to home (0 to disable)
+  cooldown-seconds: 10 # Cooldown between home teleports
+
+# Custom tag settings for max-level clans
+max-level-custom-tag:
+  enabled: true
+  allow-formatting-codes: true # Allow &l (bold), &o (italic), &n (underline), etc.
+  allow-color-codes: true # Allow &a-f, &0-9, and HEX colors like &#ff5555
+
+# Upgrades System
+# Level 1 is the default level upon creation.
+upgrades:
+  1:
+    cost: 0
+    max-members: 5
+    max-allies: 1
+    tag-color: "&7" # Gray tag
+    vault-rows: 1   # 9 slots
+  2:
+    cost: 500.0
+    max-members: 10
+    max-allies: 2
+    tag-color: "&f" # White tag
+    vault-rows: 2   # 18 slots
+  3:
+    cost: 2500.0
+    max-members: 15
+    max-allies: 3
+    tag-color: "&a" # Green tag
+    vault-rows: 3   # 27 slots
+  4:
+    cost: 10000.0
+    max-members: 20
+    max-allies: 4
+    tag-color: "&b" # Aqua tag
+    vault-rows: 4   # 36 slots
+  5:
+    cost: 50000.0
+    max-members: 30
+    max-allies: 5
+    tag-color: "&#ff55ff" # Hex Pink tag (Max level!)
+    vault-rows: 6   # 54 slots (Double Chest)
+
+# Feature Toggles and Settings
+features:
+  nexus:
+    enabled: true
+    nexus-block: "BEACON"
+    base-radius: 30
+    radius-per-level: 10
+    buff-interval-seconds: 5
+  quests:
+    enabled: true
+    reward-money: 1000.0
+    reward-clan-xp: 100
+  wars:
+    enabled: true
+    duration-hours: 24
+    winner-bank-take-percent: 15.0
+  perks:
+    enabled: true
+  logs:
+    enabled: true
+    max-entries-stored: 100
+  effects:
+    enabled: true
+    synergy-radius: 5.0
+  discord:
+    enabled: false
+    webhook-url: "https://discord.com/api/webhooks/your-webhook-id/your-token"
+
+# Chat Formatting
+chat:
+  clan-chat-format: "&d[Clan Chat] &7{role_suffix}{player}&f: {message}"
+  ally-chat-format: "&b[Ally Chat] &e{clan} &7{role_suffix}{player}&f: {message}"
+  # System prefix
+  prefix: "&8[&dNeonClans&8] &r"
+
+# Database Auto-save interval in minutes
+save-interval-minutes: 5
