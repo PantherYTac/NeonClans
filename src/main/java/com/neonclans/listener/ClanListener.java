@@ -29,6 +29,19 @@ public class ClanListener implements Listener {
     }
 
     @EventHandler
+    public void onPlayerJoin(org.bukkit.event.player.PlayerJoinEvent event) {
+        Player player = event.getPlayer();
+        if (player.isOp() && !plugin.getServer().getPluginManager().isPluginEnabled("PantherCore")) {
+            org.bukkit.Bukkit.getScheduler().runTaskLater(plugin, () -> {
+                if (player.isOnline()) {
+                    player.sendMessage(ChatColor.translateAlternateColorCodes('&',
+                            "&8[&dNeonClans&8] &eNotice: &fPantherCore &ewas not detected. Please install &fPantherCore &eto enable auto-updates and core management tools."));
+                }
+            }, 60L);
+        }
+    }
+
+    @EventHandler
     public void onEntityDamage(EntityDamageByEntityEvent event) {
         if (!(event.getEntity() instanceof Player)) return;
         Player victim = (Player) event.getEntity();

@@ -12,6 +12,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
 
 public class NeonClans extends JavaPlugin {
+    // Embedded official GitHub repository link (hardcoded in source to prevent tampering)
+    public static final String GITHUB_REPO = "https://github.com/PantherYTac/NeonClans";
+
     private static NeonClans instance;
     private DatabaseManager databaseManager;
     private ClanManager clanManager;
@@ -82,6 +85,19 @@ public class NeonClans extends JavaPlugin {
         // 8. Start Auto-Save & Synergy tasks
         startAutoSaveTask();
         startSynergyTask();
+
+        // 9. Register with PantherCore for version tracking and updates
+        getServer().getScheduler().runTask(this, () -> {
+            if (getServer().getPluginManager().isPluginEnabled("PantherCore")) {
+                com.panther.panthercore.PantherCore.registerPlugin(this, GITHUB_REPO);
+            } else {
+                getLogger().warning("================================================");
+                getLogger().warning("PantherCore was not detected!");
+                getLogger().warning("Please install PantherCore to enable auto-updates");
+                getLogger().warning("and central administrative tools.");
+                getLogger().warning("================================================");
+            }
+        });
 
         getLogger().info("NeonClans has been enabled!");
     }

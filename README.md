@@ -75,9 +75,12 @@ cd NeonClans
 mvn clean package
 ```
 
-The compiled jar will be located under `target/NeonClans-1.0.0.jar`.
+The compiled jar will be located under `target/NeonClans-alpha-0.0.1.jar`.
 
 ---
 
 ## License
-This project is licensed under the MIT License.
+
+Copyright (c) 2026 PantherYTac. All Rights Reserved.
+
+This software is proprietary. No permission is granted to copy, distribute, modify, reverse engineer, decompile, or create derivative works of this plugin in source or binary form without the express prior written permission of the copyright holder.
