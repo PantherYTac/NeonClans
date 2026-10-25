@@ -27,12 +27,12 @@ public class PlaceholderAPIHook extends PlaceholderExpansion {
 
     @Override
     public @NotNull String getAuthor() {
-        return "Antigravity";
+        return "PantherYTac";
     }
 
     @Override
     public @NotNull String getVersion() {
-        return "1.0.0";
+        return plugin.getDescription().getVersion();
     }
 
     @Override
