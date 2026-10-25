@@ -6,7 +6,7 @@
 
     <groupId>com.neonclans</groupId>
     <artifactId>NeonClans</artifactId>
-    <version>alpha-0.0.1</version>
+    <version>0.0.1-alpha</version>
     <packaging>jar</packaging>
 
     <name>NeonClans</name>

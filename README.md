@@ -75,7 +75,7 @@ cd NeonClans
 mvn clean package
 ```
 
-The compiled jar will be located under `target/NeonClans-alpha-0.0.1.jar`.
+The compiled jar will be located under `target/NeonClans-0.0.1-alpha.jar`.
 
 ---
 

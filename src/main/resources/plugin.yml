@@ -1,5 +1,5 @@
 name: NeonClans
-version: alpha-0.0.1
+version: 0.0.1-alpha
 main: com.neonclans.NeonClans
 api-version: '1.20'
 description: A highly customizable and premium Minecraft clans plugin with upgrades, alliances, vaults, and custom tags.
